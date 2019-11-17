@@ -25,10 +25,14 @@ class CreateCard extends StatelessWidget {
             bottom: 15,
             right: 0,
             child: Text(
-              this.titulo ,
-              style: TextStyle(color: Colors.white, shadows: [
-                Shadow(offset: Offset(-1.5, -1.5), color: Colors.black)
-              ], fontWeight: FontWeight.bold, fontSize: 15),
+              this.titulo,
+              style: TextStyle(
+                  color: Colors.white,
+                  shadows: [
+                    Shadow(offset: Offset(-1.5, -1.5), color: Colors.black)
+                  ],
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15),
             ),
           ),
         ],

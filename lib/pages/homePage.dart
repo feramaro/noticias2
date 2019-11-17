@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:noticias_2/pages/homeApp.dart';
 import 'package:noticias_2/pages/homeCategorias.dart';
-import 'package:noticias_2/services/httpTopHeadLines.dart';
-import 'package:noticias_2/widgetBuilder/cards.dart';
 
 class HomePage extends StatefulWidget {
   @override
