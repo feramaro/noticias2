@@ -4,7 +4,8 @@ import 'package:noticias_2/widgetBuilder/categorias.dart';
 class HomeCategorias extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SingleChildScrollView(
+        child: Container(
       child: Column(
         children: <Widget>[
           Categorias("Finanças", 'images/bg_financas.jpg'),
@@ -12,6 +13,6 @@ class HomeCategorias extends StatelessWidget {
           Categorias("Esporte", "images/bg_esportes.jpg")
         ],
       ),
-    );
+    ));
   }
 }

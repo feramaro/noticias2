@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:noticias_2/pages/homeApp.dart';
 import 'package:noticias_2/pages/homeCategorias.dart';
+import 'package:noticias_2/services/httpTopHeadLines.dart';
+import 'package:noticias_2/widgetBuilder/cards.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -8,12 +10,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   int _currentIndex = 0;
-  final List<Widget> _children = [
-    HomeApp(),
-    HomeCategorias()
-  ];
+  final List<Widget> _children = [HomeApp(), HomeCategorias()];
 
   @override
   Widget build(BuildContext context) {
@@ -23,23 +21,26 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
         backgroundColor: Colors.black,
       ),
-      body: SingleChildScrollView(
-        child: _children[_currentIndex],
-      ),
+      body:  
+         _children[_currentIndex],
+      
       bottomNavigationBar: BottomNavigationBar(
-        onTap: onTabTapped,
-        currentIndex: _currentIndex,
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), title: Text("Início")),
-          BottomNavigationBarItem(icon: Icon(Icons.list), title: Text("Categorias"))
-        ]
-      ),
+          onTap: onTabTapped,
+          currentIndex: _currentIndex,
+          items: [
+            BottomNavigationBarItem(
+                icon: Icon(Icons.home), title: Text("Início")),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.list), title: Text("Categorias"))
+          ]),
     );
   }
 
-  void onTabTapped(index){
+  void onTabTapped(index) {
     setState(() {
       _currentIndex = index;
     });
   }
+
+  
 }
