@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:noticias_2/pages/pageNoticia.dart';
 import 'package:noticias_2/services/httpCon.dart';
 import 'package:noticias_2/widgetBuilder/cards.dart';
 
@@ -40,7 +41,12 @@ class _HomeAppState extends State<HomeApp> {
                     : snapshot.data["articles"][index]["urlToImage"],
                 snapshot.data["articles"][index]["title"],
                 snapshot.data["articles"][index]["description"]),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) => 
+                  PageNoticia(snapshot.data["articles"][index])
+              ));
+            },
           );
         } else {
           return Container(

@@ -19,7 +19,7 @@ class Categorias extends StatelessWidget {
             children: <Widget>[
               Image.asset(
                 this.image,
-                fit: BoxFit.fill,
+                fit: BoxFit.cover,
               ),
               Align(
                 alignment: Alignment.center,
