@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Noticias2"),
+        title: Text("Últimas Notícias"),
         centerTitle: true,
         backgroundColor: Colors.black,
       ),
@@ -23,6 +23,9 @@ class _HomePageState extends State<HomePage> {
          _children[_currentIndex],
       
       bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.black,
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.grey,
           onTap: onTabTapped,
           currentIndex: _currentIndex,
           items: [

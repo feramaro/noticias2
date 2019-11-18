@@ -35,17 +35,19 @@ class PageNoticia extends StatelessWidget {
                 padding: EdgeInsets.all(10.0),
                 child: Text(this._dadosNoticia["content"]),
               ),
-              Text("Saiba mais em:"),
-              GestureDetector(
-                child: Text(
-                  this._dadosNoticia["url"],
-                  style: TextStyle(
-                      decoration: TextDecoration.underline, color: Colors.blue),textAlign: TextAlign.center,
-                ),
-                onTap: ()  => Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => OpenWebWiew(this._dadosNoticia["source"]["name"] ,this._dadosNoticia["url"])
-                )),
-              )
+              FlatButton(
+                  color: Colors.blue,
+                  onPressed: () => Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => OpenWebWiew(
+                              this._dadosNoticia["source"]["name"],
+                              this._dadosNoticia["url"]),
+                        ),
+                      ),
+                  child: Text(
+                    "Clique aqui para ver a noticia completa",
+                    style: TextStyle(color: Colors.white),
+                  ))
             ],
           ),
         ),
