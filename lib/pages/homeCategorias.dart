@@ -8,9 +8,9 @@ class HomeCategorias extends StatelessWidget {
         child: Container(
       child: Column(
         children: <Widget>[
-          Categorias("Finanças", 'images/bg_financas.jpg'),
-          Categorias("Tecnologia", 'images/bg_tecnologia.jpg'),
-          Categorias("Esporte", "images/bg_esportes.jpg")
+          Categorias("Finanças", 'https://i.imgur.com/qTJ88Xs.jpg', Colors.black87),
+          Categorias("Tecnologia", 'https://i.imgur.com/1YVY7yJ.jpg', Colors.white),
+          Categorias("Esporte", "https://i.imgur.com/juLwzVF.jpg", Colors.white)
         ],
       ),
     ));

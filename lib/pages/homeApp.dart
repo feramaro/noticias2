@@ -10,7 +10,7 @@ class HomeApp extends StatefulWidget {
 }
 
 class _HomeAppState extends State<HomeApp> {
-  int pageNoticia = 2;
+  int pageNoticia = 1;
 
   @override
   Widget build(BuildContext context) {
