@@ -1,6 +1,6 @@
 # Noticias
 
-Aplicativo de noticias criado usando o sdk Flutter
+Aplicativo de noticias criado usando o SDK Flutter
 
 ## Informações Adicionais
 
